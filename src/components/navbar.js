@@ -1,6 +1,8 @@
 import React from "react";
 // import { Link } from "react-router-dom";
 import styled from "styled-components";
+import DropdownMenu from "./dropdownMenu";
+
 const cLink =`https://researchkernel.org`;
 
 const Navbar1 = styled.div`
@@ -89,18 +91,9 @@ export default class Navbar extends React.Component {
       <SearchBar placeholder="Search Research Papers" />
       <Link href={popularLink} > Popular </Link>
         <Link href={allLink} > All </Link>
-     
-     
-        // <Profile>
-      // <ProfileContent>
-      // </ProfileContent></Profile>        
-
-        < Dropdown >
-          <option value="val1" ><a href=""></a></option>
-          <option value="val2" selected>Night Mode</option>
-          <option value="val3" >Login</option>
-          <option value="val4"></option>
-        </Dropdown >    </Navbar1>
+      <DropdownMenu />
+              
+     </Navbar1>
     )};
 };
 
