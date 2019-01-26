@@ -1,97 +1,72 @@
 import React from "react";
-// import { Link } from "react-router-dom";
 import styled from "styled-components";
 import DropdownMenu from "./dropdownMenu";
 
 const cLink =`https://researchkernel.org`;
+const popularLink = `${cLink}/popular`;
+const allLink = `${cLink}/all`;
 
 const Navbar1 = styled.div`
-
   border-style: solid;
   border-width: 0px 0px 1px 0px;
   font-weight: bold;
   font-size: 20px;
-  padding: 1rem 1.5rem 1.2rem 1.5rem;
+  padding: .7rem 1.5rem .2rem 1.5rem;
   display: flex;
   flex-direction: row;
   `;
 
 const Link = styled.a`
-  
+  text-decoration: none;
   position: relative;
-  padding: 0rem .5rem 1.2rem .5rem;  
+  margin-left: 5px;
+  padding: .3rem .3rem .3rem .3rem;  
   display: inline-block;
   cursor: pointer;
   &:hover {
     background-color: #fafafa;
     color: #007bff; 
-  }
+   }
 `;
 
 const SearchBar = styled.input`
-position: relative;
-// 
-font-size: 14px;
-width: 20%;
-display: table;
-  padding: 0rem .5rem 1.2rem .5rem;
-  margin-left: 350px;  
- margin-bottom: 9px;
- margin-right: 450px;
- display: inline-block;
+    background-color: rgb(246, 247, 248);
+    box-shadow: none;
+    color: rgb(28, 28, 28);
+    border-radius: 4px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(237, 239, 241);
+    border-image: initial;
+    outline: none;
+    width: 40%;
+    padding: 0rem .5rem 1.2rem .5rem;
+    margin-left: 350px;  
+    margin-bottom: 9px;
+    margin-right: 370px;
+    height: 20px;
+     
+   &:hover {
+    background-color: rgb(255, 255, 255);
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(0, 121, 211);
+    border-image: initial;
+ }
  `;
-const Dropdown = styled.select.attrs({
-  name: "Profile"
-})`
- font-size: inherit; 
-   padding: 0rem .5rem 1.2rem .5rem;
-  border: none;
-  outline: none;
-  display: inline-block;
-  cursor: pointer;
-  background-color: inherit;
-  
-  //font: 0.8em "Montserrat", sans-serif;
-  //height: 3em;
-  //width: 18em; 
-`
 
-const Profile = styled.button`
-  
-   font-size: inherit; 
-   padding: 0rem .5rem 1.2rem .5rem;
-  border: none;
-  display: inline-block;
-  cursor: pointer;
-  background-color: inherit;
-  //font-family: inherit;
-  //margin: 0;
-`;
-
-const ProfileContent = styled.div`
-  
-// .navbar a:hover, .dropdown:hover .dropbtn {
-  ${Profile}: hover{
-    display: inline-grid;
-   background-color: #fafafa;
-    color: #007bff;
-  }
-`;
-
-
-const popularLink=`${cLink}/popular`;
-const allLink = `${cLink}/all`;
 
 export default class Navbar extends React.Component {
   
   render() {
     return (
-      <Navbar1>
-      Logo
-      <SearchBar placeholder="Search Research Papers" />
-      <Link href={popularLink} > Popular </Link>
-        <Link href={allLink} > All </Link>
-      <DropdownMenu />
+     <Navbar1>
+       Logo
+       
+       <SearchBar placeholder="Search Research Papers" />
+       <Link href={popularLink} > Popular </Link>
+       <Link href={allLink} > All </Link>
+       <DropdownMenu />
               
      </Navbar1>
     )};
