@@ -1,5 +1,8 @@
 import React from "react";
 
+        /* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+
 function myFunction() {
     document.getElementById("myDropdown").classList.toggle("show");
 }
@@ -7,17 +10,15 @@ function myFunction() {
 
 export default class DropdownMenu extends React.Component { 
     render() {
-        /* When the user clicks on the button, 
-toggle between hiding and showing the dropdown content */
-        
+
         return (
 
           
             <div className="navbar">
                 <div className="dropdown">
                     <button className="dropbtn" onClick={myFunction}>
-                    <i class="fa fa-user"></i>
-                    <i class="fa fa-caret-down"></i>
+                    <i className="fa fa-user"></i>
+                    <i className="fa fa-caret-down"></i>
                     </button>
                     <div className="dropdown-content" id="myDropdown">
                         <a href="#">Night Mode</a>
